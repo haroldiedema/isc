@@ -11,6 +11,7 @@ module.exports = (function (options) {
         fs             = require('fs'),
         annotation_dir = __dirname + path.sep + 'annotations';
 
+    options.include = options.include || [];
     if (! options.annotations) {
         options.annotations = {};
     }

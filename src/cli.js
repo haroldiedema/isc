@@ -10,6 +10,7 @@
     var colors   = require('colors'),
         args     = require('cli-args')(process.argv.slice(2)),
         fs       = require('fs'),
+        JSON5    = require('json5'),
         options  = {
             input   : null,
             output  : null,
@@ -35,7 +36,9 @@
     if (options.minify) {
         args['_'].splice(args['_'].indexOf('minify'), 1);
     }
-
+    if (typeof args.include !== 'undefined') {
+        options.include = args.include.split(',');
+    }
     // Detect required input file argument
     if (args['_'].length === 0 ||
         args['_'].indexOf('h') !== -1 ||

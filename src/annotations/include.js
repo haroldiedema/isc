@@ -28,6 +28,17 @@ module.exports = (function (file, data, options) {
     var source = getSource(data_w_args[2]),
         args   = JSON5.parse(data_w_args[4]);
 
+    if (typeof args.if === 'string') {
+        if (options.include.indexOf(args.if) === -1) {
+            return '';
+        }
+    } else if (typeof args.if === 'object') {
+        for(var i in options.args) {
+            if (false === options.args.hasOwnProperty(i)) continue;
+            if (options.args.indexOf(options.include[options.args[i]]) === -1) return '';
+        }
+    }
+
     if (typeof args.export === 'string') {
         var p = (args.export.indexOf('.') !== -1) ? args.export : 'var ' + args.export;
         var s = (args.execute === true);

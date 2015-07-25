@@ -28,7 +28,7 @@ module.exports = (function (file, options) {
         var docblock = /\/\*{2}([\s\S]+?)\*\//g,
             trim     = function(string){ return string.replace(/^\s+|\s+$/g, ''); },
             split    = function(string) { return string.split(/[\r\n]\s*\*\s+/);},
-            anregx   = /@(\w+)\s?\((['"0-9a-zA-Z=\s\/\.\,\{\}\:\$\_\#\(\)]+\s?)\)/gi,
+            anregx   = /@(\w+)\s?\((['"0-9a-zA-Z=\s\/\.\,\{\}\:\$\-\_\#\(\)]+\s?)\)/gi,
             match, src, reg, nodes;
 
         while (match = docblock.exec(source)) {

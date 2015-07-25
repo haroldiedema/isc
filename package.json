@@ -1,6 +1,6 @@
 {
   "name": "isc",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Inline Source Composer",
   "main": "src/isc.js",
   "scripts": {

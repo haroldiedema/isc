@@ -1,9 +1,11 @@
 (function(w) {
 
+    /** @build("app", "foo") */
+
     var System = {};
     /**
      * @include("hoi.js", {export: "System.Query", module: true})
-     * @include("foobar.js")
+     * @include("foobar.js", {if: 'app'})
      **/
 
 
