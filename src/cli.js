@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*                                                                __ ____  ___
  Build-Tool: Inline Source Composer                              (  / ___)/ __)
  by Harold Iedema <harold@iedema.me>, Licensed under MIT.         )(\___ ( (__
