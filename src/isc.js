@@ -22,17 +22,9 @@ module.exports = (function (options) {
         file = annotation_dir + path.sep + files[i];
         options.annotations[path.basename(file, '.js')] = require(file);
     }
+
     var compile = function (file) {
         var src = compiler(file, options);
-            //logger.log('COMPILER', 'Minifying source...');
-            //minify('client.js', function(error, data) {
-            //    if (error) {
-            //        throw Error(error.message);
-            //    } else {
-            //        logger.log('COMPILER', 'Writing compiled & minified source to "' + options.output + '".');
-            //        fs.writeFileSync(options.output, data);
-            //    }
-            //});
         if (typeof options.output === 'string') {
             logger.log('COMPILER', 'Writing compiled source to "' + options.output + '".');
             fs.writeFileSync(options.output, src);
