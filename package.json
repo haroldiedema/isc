@@ -1,0 +1,38 @@
+{
+  "name": "isc",
+  "version": "0.0.1",
+  "description": "Inline Source Composer",
+  "main": "src/isc.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haroldiedema/isc.git"
+  },
+  "keywords": [
+    "javascript",
+    "composer",
+    "compiler",
+    "build",
+    "build-tool",
+    "tool",
+    "script",
+    "dist-tool"
+  ],
+  "author": "Harold Iedema <harold@iedema.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haroldiedema/isc/issues"
+  },
+  "dependencies": {
+    "cli-args": "^1.2.1",
+    "colors": "^1.1.2",
+    "json5": "^0.4.0",
+    "minify": "^1.4.19",
+    "syntax-error": "^1.1.4"
+  },
+  "bin": {
+    "isc" : "./src/cli.js"
+  }
+}
